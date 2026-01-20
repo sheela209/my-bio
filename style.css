@@ -49,7 +49,7 @@ span {
 /* SECTIONS */
 .section {
   min-height: 100vh;
-  padding: 120px 10%;
+  padding: 120px 12%;
   display: none;
 }
 
@@ -96,8 +96,8 @@ span {
 .about {
   display: flex;
   gap: 50px;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .about img {
