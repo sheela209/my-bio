@@ -3,11 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
-  text-decoration: none;
 }
 
-span {
-  color: orangered;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
 }
 
 /* HEADER */
@@ -15,117 +19,118 @@ span {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 10%;
-  background: rgba(0,0,0,0.8);
+  padding: 1.5rem 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: black;
   z-index: 1000;
 }
 
 .logo {
-  color: white;
-  font-size: 24px;
+  font-size: 2rem;
+  color: #b74b4b;
   font-weight: bold;
 }
 
+/* NAVBAR */
 .navbar a {
+  margin-left: 3rem;
+  font-size: 1rem;
   color: white;
-  margin: 0 15px;
   transition: 0.3s;
 }
 
-.navbar a:hover {
-  color: orangered;
-}
-
-.Contact {
-  background: white;
-  padding: 8px 20px;
-  border-radius: 6px;
-  color: black;
+.navbar a:hover,
+.navbar a.active {
+  color: #b74b4b;
 }
 
 /* SECTIONS */
-.section {
+section {
   min-height: 100vh;
-  padding: 120px 12%;
-  display: none;
-}
-
-.section:target {
-  display: block;
-}
-
-#home {
-  display: flex;
+  padding: 8rem 8%;
 }
 
 /* HOME */
 .home {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 6rem;
+}
+
+.home-img img {
+  width: 320px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #b74b4b;
 }
 
 .home-content h1 {
-  font-size: 50px;
+  font-size: 5rem;
 }
 
-.btn-box {
-  margin-top: 20px;
+.home-content h3 {
+  font-size: 3rem;
 }
 
-.btn-1, .btn-2 {
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin-right: 10px;
+.home-content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
-.btn-1 {
-  background: black;
-  color: white;
+/* SOCIAL ICONS */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #b74b4b;
+  color: #b74b4b;
+  border-radius: 50%;
+  margin: 2rem 1rem 2rem 0;
+  transition: 0.3s;
 }
 
-.btn-2 {
-  border: 2px solid black;
+.social-icons a:hover {
+  background: #b74b4b;
   color: black;
 }
 
-/* ABOUT */
-.about {
-  display: flex;
-  gap: 50px;
-  background: white;
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid #b74b4b;
+  color: #b74b4b;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b74b4b;
   color: black;
 }
 
-.about img {
-  width: 260px;
-  border-radius: 20%;
+/* OTHER SECTIONS */
+.section h2 {
+  font-size: 4rem;
+  color: #b74b4b;
+  margin-bottom: 1rem;
 }
 
-/* INFO BOX */
-.info-box {
-  background: #f2f2f2;
+.section p {
+  font-size: 1.6rem;
 }
 
-.info-box h2 {
-  margin-bottom: 20px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* CONTACT */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-}
-
-/* FOOTER */
-.footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  .navbar a {
+    margin-left: 1.5rem;
+  }
 }
